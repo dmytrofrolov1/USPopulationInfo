@@ -16,7 +16,7 @@ protocol MainPresentationLogic {
 
 }
 
-protocol MainDisplayLogic: class {
+protocol MainDisplayLogic: AnyObject {
 
 }
 

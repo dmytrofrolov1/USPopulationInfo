@@ -11,7 +11,7 @@ import UIKit
 class StateInfoInteractor {
 
     var output: StateInfoPresentationLogic?
-
+    private let requestManager = RequestManager()
 }
 
 
@@ -19,7 +19,10 @@ class StateInfoInteractor {
 
 extension StateInfoInteractor: StateInfoBusinessLogic {
 
-
-    // MARK: - Business logic
+    func loadData(request: any RequestProtocol) {
+        requestManager.loadData(request: request) { (result: Result<StatesDataModel, Error>) in
+            print("result states:", result)
+        }
+    }
 
 }

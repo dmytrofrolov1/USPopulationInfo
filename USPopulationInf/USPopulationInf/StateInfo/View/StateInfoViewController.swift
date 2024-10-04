@@ -12,7 +12,7 @@ class StateInfoViewController: UIViewController {
 
     var interactor: StateInfoBusinessLogic!
     var router: StateInfoRouterProtocol!
-
+    private var configuration: PageConfiguration?
 
     // MARK: - Initializers
 
@@ -56,5 +56,20 @@ extension StateInfoViewController: StateInfoDisplayLogic {
 
 
     // MARK: - Display logic
+    
+}
 
+extension StateInfoViewController: InfoPage {
+    func update(configuration: any PageConfiguration) {
+        self.configuration = configuration
+        interactor.loadData(request: configuration.requestType)
+    }
+    
+    var pageName: String {
+        configuration?.pageName ?? ""
+    }
+    
+    var type: PageType {
+        .states
+    }
 }

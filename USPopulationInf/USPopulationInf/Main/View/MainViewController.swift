@@ -9,25 +9,11 @@
 import UIKit
 
 class MainViewController: UIViewController {
-    
-    private enum Const {
-        enum Pages: Int {
-            case nations
-            case states
-            
-            var pageName: String {
-                switch self {
-                case .nations: return "Nations"
-                case .states: return "States"
-                }
-            }
-        }
-    }
 
     var interactor: MainBusinessLogic!
     var router: MainRouterProtocol!
 
-    private var pages = [UIViewController]()
+    private var pages = [InfoPage]()
     private var currentIndex: Int = 0
 
     private lazy var pageController: UIPageViewController = {
@@ -81,8 +67,8 @@ class MainViewController: UIViewController {
     }
 
     private func setupPages() {
-        let nationVC = NationInfoViewController()
-        let stateVC = StateInfoViewController()
+        let nationVC = InfoPageFactory().getPage(type: .nations)
+        let stateVC = InfoPageFactory().getPage(type: .states)
         pages.append(nationVC)
         pages.append(stateVC)
         pageController.setViewControllers([nationVC],
@@ -93,8 +79,9 @@ class MainViewController: UIViewController {
     
     
     private lazy var segmentControl: UISegmentedControl = {
-        let control = UISegmentedControl(items: [Const.Pages.nations.pageName, Const.Pages.states.pageName])
-        control.selectedSegmentIndex = Const.Pages.nations.rawValue
+        let pageNames = pages.map { $0.pageName }
+        let control = UISegmentedControl(items: pageNames)
+        control.selectedSegmentIndex = 0
         control.addTarget(self, action: #selector(segmentChanged(_:)), for: .valueChanged)
         return control
     }()
@@ -113,19 +100,11 @@ class MainViewController: UIViewController {
     
     @objc func segmentChanged(_ sender: UISegmentedControl) {
         let index = sender.selectedSegmentIndex
-        var page = pages[Const.Pages.nations.rawValue]
+        let page = pages[index]
         var direction: UIPageViewController.NavigationDirection = .forward
-        switch index {
-        case Const.Pages.nations.rawValue:
-            page = pages[Const.Pages.nations.rawValue]
-            direction = currentIndex > 0 ? .forward : .reverse
-        case Const.Pages.states.rawValue:
-            page = pages[Const.Pages.states.rawValue]
-            direction = currentIndex == 0 ? .forward : .reverse
-        default:
-            page = pages[Const.Pages.nations.rawValue]
-            direction = .forward
-            
+        switch page.type {
+        case .nations: direction = currentIndex > 0 ? .forward : .reverse
+        case .states: direction = currentIndex == 0 ? .forward : .reverse
         }
         pageController.setViewControllers([page],
                                           direction: direction,

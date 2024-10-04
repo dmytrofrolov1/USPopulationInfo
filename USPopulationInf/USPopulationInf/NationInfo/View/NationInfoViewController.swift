@@ -8,11 +8,11 @@
 
 import UIKit
 
-class NationInfoViewController: UIViewController {
+class NationInfoViewController: UIViewController  {
 
     var interactor: NationInfoBusinessLogic!
     var router: NationInfoRouterProtocol!
-
+    private var configuration: PageConfiguration?
 
     // MARK: - Initializers
 
@@ -57,4 +57,20 @@ extension NationInfoViewController: NationInfoDisplayLogic {
 
     // MARK: - Display logic
 
+}
+
+extension NationInfoViewController: InfoPage {
+    func update(configuration: any PageConfiguration) {
+        self.configuration = configuration
+        interactor.loadData(request: configuration.requestType)
+    }
+    
+    var pageName: String {
+        configuration?.pageName ?? ""
+    }
+    
+    var type: PageType {
+        .nations
+    }
+    
 }

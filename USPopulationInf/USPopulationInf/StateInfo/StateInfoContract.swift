@@ -9,7 +9,7 @@
 import UIKit
 
 protocol StateInfoBusinessLogic {
-
+    func loadData(request: RequestProtocol)
 }
 
 protocol StateInfoPresentationLogic {

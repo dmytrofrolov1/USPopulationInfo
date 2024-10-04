@@ -11,15 +11,17 @@ import UIKit
 class NationInfoInteractor {
 
     var output: NationInfoPresentationLogic?
-
+    private let requestManager = RequestManager()
 }
 
 
 // MARK: - NationInfoBusinessLogic
 
 extension NationInfoInteractor: NationInfoBusinessLogic {
-
-
-    // MARK: - Business logic
+    func loadData(request: any RequestProtocol) {
+        requestManager.loadData(request: request) { (result: Result<NationsDataModel, Error>) in
+            print("result nations", result)
+        }
+    }
 
 }

@@ -5,17 +5,22 @@
 //  Created by Dmytro on 04.10.2024.
 //
 
-import Foundation
+import UIKit
 
-struct InfoPageFactory {
-    //type ???
+struct InfoPageFactory:PageFactory {
     
-    // request type that will be used in Network
-    
-    // DTO model?
-    
-    //Cell type? //viewmodel will updte titles depends on DTO type?
-    
-    //initWithConfiguratoin ?? configuration will include all types and diffs
+    func getPage(type: PageType) -> any InfoPage {
+        switch type {
+        case .nations:
+            let vc = NationInfoViewController()
+            vc.update(configuration: NationsPageConfiguration())
+            return vc
+        case .states:
+            let vc = StateInfoViewController()
+            vc.update(configuration: StatesPageConfiguration())
+            return vc
+        }
+    }
     
 }
+

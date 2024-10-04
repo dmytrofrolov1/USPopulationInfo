@@ -30,7 +30,14 @@
 		665425F32CB0278400EA4585 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665425EB2CB0278400EA4585 /* MainRouter.swift */; };
 		665425F42CB0278400EA4585 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665425ED2CB0278400EA4585 /* MainViewController.swift */; };
 		665425F52CB0278400EA4585 /* MainContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665425EF2CB0278400EA4585 /* MainContract.swift */; };
-		665425F82CB03DC600EA4585 /* InfoPageFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665425F72CB03DC600EA4585 /* InfoPageFactory.swift */; };
+		665426002CB0435700EA4585 /* Contracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665425FD2CB0435700EA4585 /* Contracts.swift */; };
+		665426012CB0435700EA4585 /* InfoPageFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665425FE2CB0435700EA4585 /* InfoPageFactory.swift */; };
+		665426132CB0469800EA4585 /* RequestManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665426122CB0469800EA4585 /* RequestManagerProtocol.swift */; };
+		665426152CB046CD00EA4585 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665426142CB046CD00EA4585 /* RequestManager.swift */; };
+		665426182CB0489100EA4585 /* NationsPageConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665426172CB0489100EA4585 /* NationsPageConfiguration.swift */; };
+		6654261A2CB048F500EA4585 /* StatesPageConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665426192CB048F500EA4585 /* StatesPageConfiguration.swift */; };
+		6654261C2CB06C0D00EA4585 /* NationsDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6654261B2CB06C0D00EA4585 /* NationsDataModel.swift */; };
+		6654261E2CB078AC00EA4585 /* StatesDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6654261D2CB078AC00EA4585 /* StatesDataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,7 +85,14 @@
 		665425EB2CB0278400EA4585 /* MainRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
 		665425ED2CB0278400EA4585 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		665425EF2CB0278400EA4585 /* MainContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainContract.swift; sourceTree = "<group>"; };
-		665425F72CB03DC600EA4585 /* InfoPageFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPageFactory.swift; sourceTree = "<group>"; };
+		665425FD2CB0435700EA4585 /* Contracts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contracts.swift; sourceTree = "<group>"; };
+		665425FE2CB0435700EA4585 /* InfoPageFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoPageFactory.swift; sourceTree = "<group>"; };
+		665426122CB0469800EA4585 /* RequestManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManagerProtocol.swift; sourceTree = "<group>"; };
+		665426142CB046CD00EA4585 /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
+		665426172CB0489100EA4585 /* NationsPageConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NationsPageConfiguration.swift; sourceTree = "<group>"; };
+		665426192CB048F500EA4585 /* StatesPageConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatesPageConfiguration.swift; sourceTree = "<group>"; };
+		6654261B2CB06C0D00EA4585 /* NationsDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NationsDataModel.swift; sourceTree = "<group>"; };
+		6654261D2CB078AC00EA4585 /* StatesDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatesDataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,7 +143,8 @@
 		665425902CB023AF00EA4585 /* USPopulationInf */ = {
 			isa = PBXGroup;
 			children = (
-				665425F62CB03DAD00EA4585 /* InfoPageFactory */,
+				665426112CB0466500EA4585 /* Network */,
+				665425FF2CB0435700EA4585 /* InfoPageFactory */,
 				665425F02CB0278400EA4585 /* Main */,
 				665425D02CB0264F00EA4585 /* NationInfo */,
 				665425DA2CB0264F00EA4585 /* StateInfo */,
@@ -292,12 +307,34 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
-		665425F62CB03DAD00EA4585 /* InfoPageFactory */ = {
+		665425FF2CB0435700EA4585 /* InfoPageFactory */ = {
 			isa = PBXGroup;
 			children = (
-				665425F72CB03DC600EA4585 /* InfoPageFactory.swift */,
+				665426162CB0488300EA4585 /* Configurations */,
+				665425FD2CB0435700EA4585 /* Contracts.swift */,
+				665425FE2CB0435700EA4585 /* InfoPageFactory.swift */,
 			);
 			path = InfoPageFactory;
+			sourceTree = "<group>";
+		};
+		665426112CB0466500EA4585 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				665426122CB0469800EA4585 /* RequestManagerProtocol.swift */,
+				665426142CB046CD00EA4585 /* RequestManager.swift */,
+				6654261B2CB06C0D00EA4585 /* NationsDataModel.swift */,
+				6654261D2CB078AC00EA4585 /* StatesDataModel.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		665426162CB0488300EA4585 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				665426172CB0489100EA4585 /* NationsPageConfiguration.swift */,
+				665426192CB048F500EA4585 /* StatesPageConfiguration.swift */,
+			);
+			path = Configurations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -431,23 +468,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				665425DF2CB0264F00EA4585 /* NationInfoContract.swift in Sources */,
+				6654261A2CB048F500EA4585 /* StatesPageConfiguration.swift in Sources */,
+				665426182CB0489100EA4585 /* NationsPageConfiguration.swift in Sources */,
+				6654261C2CB06C0D00EA4585 /* NationsDataModel.swift in Sources */,
 				665425F32CB0278400EA4585 /* MainRouter.swift in Sources */,
 				665425E32CB0264F00EA4585 /* StateInfoViewController.swift in Sources */,
 				665425962CB023AF00EA4585 /* ViewController.swift in Sources */,
+				665426152CB046CD00EA4585 /* RequestManager.swift in Sources */,
+				665426002CB0435700EA4585 /* Contracts.swift in Sources */,
 				665425E22CB0264F00EA4585 /* StateInfoRouter.swift in Sources */,
 				665425922CB023AF00EA4585 /* AppDelegate.swift in Sources */,
 				665425F12CB0278400EA4585 /* MainInteractor.swift in Sources */,
+				665426012CB0435700EA4585 /* InfoPageFactory.swift in Sources */,
 				665425F42CB0278400EA4585 /* MainViewController.swift in Sources */,
 				665425942CB023AF00EA4585 /* SceneDelegate.swift in Sources */,
+				665426132CB0469800EA4585 /* RequestManagerProtocol.swift in Sources */,
 				665425E02CB0264F00EA4585 /* StateInfoInteractor.swift in Sources */,
 				665425F52CB0278400EA4585 /* MainContract.swift in Sources */,
 				665425DB2CB0264F00EA4585 /* NationInfoInteractor.swift in Sources */,
+				6654261E2CB078AC00EA4585 /* StatesDataModel.swift in Sources */,
 				665425E42CB0264F00EA4585 /* StateInfoContract.swift in Sources */,
 				665425F22CB0278400EA4585 /* MainPresenter.swift in Sources */,
 				665425E12CB0264F00EA4585 /* StateInfoPresenter.swift in Sources */,
 				665425DE2CB0264F00EA4585 /* NationInfoViewController.swift in Sources */,
 				665425DC2CB0264F00EA4585 /* NationInfoPresenter.swift in Sources */,
-				665425F82CB03DC600EA4585 /* InfoPageFactory.swift in Sources */,
 				665425DD2CB0264F00EA4585 /* NationInfoRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
