@@ -20,8 +20,10 @@ class StateInfoInteractor {
 extension StateInfoInteractor: StateInfoBusinessLogic {
 
     func loadData(request: any RequestProtocol) {
-        requestManager.loadData(request: request) { (result: Result<StatesDataModel, Error>) in
-            print("result states:", result)
+        requestManager.loadData(request: request) { [weak self] result in
+            DispatchQueue.main.async {
+                self?.output?.loadedResult(result: result)
+            }
         }
     }
 

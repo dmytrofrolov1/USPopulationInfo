@@ -16,6 +16,18 @@ class StateInfoViewController: UIViewController {
 
     // MARK: - Initializers
 
+    private lazy var tableView: UITableView = {
+        let table = UITableView()
+        table.translatesAutoresizingMaskIntoConstraints = false
+        return table
+    }()
+    
+    private lazy var tableController: StatesInfoTableController = {
+        let controller = StatesInfoTableController(tableView: tableView)
+        return controller
+    }()
+    
+    
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         setup()
@@ -38,8 +50,21 @@ class StateInfoViewController: UIViewController {
         interactor.output = presenter
         presenter.output = viewController
         router.viewController = viewController
+        
+        setupTableView()
     }
 
+    
+    private func setupTableView() {
+        view.addSubview(tableView)
+        let guide = view.safeAreaLayoutGuide
+        NSLayoutConstraint.activate([
+            tableView.topAnchor.constraint(equalTo: guide.topAnchor),
+            tableView.rightAnchor.constraint(equalTo: guide.rightAnchor),
+            tableView.bottomAnchor.constraint(equalTo: guide.bottomAnchor),
+            tableView.leftAnchor.constraint(equalTo: guide.leftAnchor)
+        ])
+    }
     // MARK: - View lifecycle
 
     override func viewDidLoad() {
@@ -53,10 +78,9 @@ class StateInfoViewController: UIViewController {
 // MARK: - StateInfoDisplayLogic
 
 extension StateInfoViewController: StateInfoDisplayLogic {
-
-
-    // MARK: - Display logic
-    
+    func present(data: [StateInfoViewModel]) {
+        tableController.reload(data: data)
+    }
 }
 
 extension StateInfoViewController: InfoPage {

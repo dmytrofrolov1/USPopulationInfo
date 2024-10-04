@@ -42,6 +42,9 @@
 		665426222CB0810900EA4585 /* NationInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665426212CB0810900EA4585 /* NationInfoViewModel.swift */; };
 		665426242CB08EF300EA4585 /* NationInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665426232CB08EF300EA4585 /* NationInfoTableViewCell.swift */; };
 		665426272CB0924F00EA4585 /* UITableViewCell+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665426262CB0924F00EA4585 /* UITableViewCell+Reusable.swift */; };
+		665426292CB0981800EA4585 /* StatesInfoTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665426282CB0981800EA4585 /* StatesInfoTableController.swift */; };
+		6654262B2CB0986400EA4585 /* StateInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6654262A2CB0986400EA4585 /* StateInfoTableViewCell.swift */; };
+		6654262D2CB098A000EA4585 /* StateInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6654262C2CB098A000EA4585 /* StateInfoViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +104,9 @@
 		665426212CB0810900EA4585 /* NationInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NationInfoViewModel.swift; sourceTree = "<group>"; };
 		665426232CB08EF300EA4585 /* NationInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NationInfoTableViewCell.swift; sourceTree = "<group>"; };
 		665426262CB0924F00EA4585 /* UITableViewCell+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Reusable.swift"; sourceTree = "<group>"; };
+		665426282CB0981800EA4585 /* StatesInfoTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatesInfoTableController.swift; sourceTree = "<group>"; };
+		6654262A2CB0986400EA4585 /* StateInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateInfoTableViewCell.swift; sourceTree = "<group>"; };
+		6654262C2CB098A000EA4585 /* StateInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateInfoViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -259,6 +265,9 @@
 			isa = PBXGroup;
 			children = (
 				665425D72CB0264F00EA4585 /* StateInfoViewController.swift */,
+				665426282CB0981800EA4585 /* StatesInfoTableController.swift */,
+				6654262A2CB0986400EA4585 /* StateInfoTableViewCell.swift */,
+				6654262C2CB098A000EA4585 /* StateInfoViewModel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -492,8 +501,10 @@
 				665426242CB08EF300EA4585 /* NationInfoTableViewCell.swift in Sources */,
 				665426202CB0804300EA4585 /* NationsTableController.swift in Sources */,
 				665426182CB0489100EA4585 /* NationsPageConfiguration.swift in Sources */,
+				6654262D2CB098A000EA4585 /* StateInfoViewModel.swift in Sources */,
 				6654261C2CB06C0D00EA4585 /* NationsDataModel.swift in Sources */,
 				665425F32CB0278400EA4585 /* MainRouter.swift in Sources */,
+				6654262B2CB0986400EA4585 /* StateInfoTableViewCell.swift in Sources */,
 				665425E32CB0264F00EA4585 /* StateInfoViewController.swift in Sources */,
 				665425962CB023AF00EA4585 /* ViewController.swift in Sources */,
 				665426152CB046CD00EA4585 /* RequestManager.swift in Sources */,
@@ -515,6 +526,7 @@
 				665425E12CB0264F00EA4585 /* StateInfoPresenter.swift in Sources */,
 				665426272CB0924F00EA4585 /* UITableViewCell+Reusable.swift in Sources */,
 				665425DE2CB0264F00EA4585 /* NationInfoViewController.swift in Sources */,
+				665426292CB0981800EA4585 /* StatesInfoTableController.swift in Sources */,
 				665425DC2CB0264F00EA4585 /* NationInfoPresenter.swift in Sources */,
 				665425DD2CB0264F00EA4585 /* NationInfoRouter.swift in Sources */,
 			);

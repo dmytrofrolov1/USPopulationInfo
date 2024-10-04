@@ -20,7 +20,15 @@ class StateInfoPresenter {
 
 extension StateInfoPresenter: StateInfoPresentationLogic {
 
-
-    // MARK: - Presentation logic
+    func loadedResult(result: Result<StatesDataModel, any Error>) {
+        switch result {
+        case .success(let model):
+            let viewModels = model.data.map{ StateInfoViewModel(dataItem: $0)}
+            output?.present(data: viewModels)
+            break
+        case .failure(let failure):
+            break
+        }
+    }
 
 }

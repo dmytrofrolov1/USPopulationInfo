@@ -13,11 +13,11 @@ protocol StateInfoBusinessLogic {
 }
 
 protocol StateInfoPresentationLogic {
-
+    func loadedResult(result: Result<StatesDataModel, Error>)
 }
 
 protocol StateInfoDisplayLogic: class {
-
+    func present(data:[StateInfoViewModel])
 }
 
 protocol StateInfoRouterProtocol {
