@@ -35,8 +35,6 @@ class MainViewController: UIViewController {
                                       navigationOrientation: .horizontal,
                                       options: nil)
         vc.view.backgroundColor = .clear
-        vc.dataSource = self
-        vc.delegate = self
         
         addChild(vc)
         view.addSubview(vc.view)
@@ -146,30 +144,4 @@ extension MainViewController: MainDisplayLogic {
 
     // MARK: - Display logic
 
-}
-
-extension MainViewController: UIPageViewControllerDataSource, UIPageViewControllerDelegate {
-    
-    func presentationCount(for pageViewController: UIPageViewController) -> Int {
-        return pages.count
-    }
-    
-    func presentationIndex(for pageViewController: UIPageViewController) -> Int {
-        return currentIndex
-    }
-    
-    
-    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        guard let currentIndex = pages.firstIndex(of: viewController), currentIndex > 0 else {
-             return nil
-         }
-         return pages[currentIndex - 1]
-     }
-     
-     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-         guard let currentIndex = pages.firstIndex(of: viewController), currentIndex < (pages.count - 1) else {
-             return nil
-         }
-         return pages[currentIndex + 1]
-     }
 }

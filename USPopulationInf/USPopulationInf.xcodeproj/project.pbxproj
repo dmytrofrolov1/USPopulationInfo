@@ -30,6 +30,7 @@
 		665425F32CB0278400EA4585 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665425EB2CB0278400EA4585 /* MainRouter.swift */; };
 		665425F42CB0278400EA4585 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665425ED2CB0278400EA4585 /* MainViewController.swift */; };
 		665425F52CB0278400EA4585 /* MainContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665425EF2CB0278400EA4585 /* MainContract.swift */; };
+		665425F82CB03DC600EA4585 /* InfoPageFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665425F72CB03DC600EA4585 /* InfoPageFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		665425EB2CB0278400EA4585 /* MainRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
 		665425ED2CB0278400EA4585 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		665425EF2CB0278400EA4585 /* MainContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainContract.swift; sourceTree = "<group>"; };
+		665425F72CB03DC600EA4585 /* InfoPageFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPageFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 		665425902CB023AF00EA4585 /* USPopulationInf */ = {
 			isa = PBXGroup;
 			children = (
+				665425F62CB03DAD00EA4585 /* InfoPageFactory */,
 				665425F02CB0278400EA4585 /* Main */,
 				665425D02CB0264F00EA4585 /* NationInfo */,
 				665425DA2CB0264F00EA4585 /* StateInfo */,
@@ -289,6 +292,14 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		665425F62CB03DAD00EA4585 /* InfoPageFactory */ = {
+			isa = PBXGroup;
+			children = (
+				665425F72CB03DC600EA4585 /* InfoPageFactory.swift */,
+			);
+			path = InfoPageFactory;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -436,6 +447,7 @@
 				665425E12CB0264F00EA4585 /* StateInfoPresenter.swift in Sources */,
 				665425DE2CB0264F00EA4585 /* NationInfoViewController.swift in Sources */,
 				665425DC2CB0264F00EA4585 /* NationInfoPresenter.swift in Sources */,
+				665425F82CB03DC600EA4585 /* InfoPageFactory.swift in Sources */,
 				665425DD2CB0264F00EA4585 /* NationInfoRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
