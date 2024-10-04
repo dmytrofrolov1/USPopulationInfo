@@ -15,7 +15,21 @@
 		665425A92CB023B100EA4585 /* USPopulationInfTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665425A82CB023B100EA4585 /* USPopulationInfTests.swift */; };
 		665425B32CB023B100EA4585 /* USPopulationInfUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665425B22CB023B100EA4585 /* USPopulationInfUITests.swift */; };
 		665425B52CB023B100EA4585 /* USPopulationInfUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665425B42CB023B100EA4585 /* USPopulationInfUITestsLaunchTests.swift */; };
-		665425C22CB024D100EA4585 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665425C12CB024D100EA4585 /* MainViewController.swift */; };
+		665425DB2CB0264F00EA4585 /* NationInfoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665425C72CB0264F00EA4585 /* NationInfoInteractor.swift */; };
+		665425DC2CB0264F00EA4585 /* NationInfoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665425C92CB0264F00EA4585 /* NationInfoPresenter.swift */; };
+		665425DD2CB0264F00EA4585 /* NationInfoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665425CB2CB0264F00EA4585 /* NationInfoRouter.swift */; };
+		665425DE2CB0264F00EA4585 /* NationInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665425CD2CB0264F00EA4585 /* NationInfoViewController.swift */; };
+		665425DF2CB0264F00EA4585 /* NationInfoContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665425CF2CB0264F00EA4585 /* NationInfoContract.swift */; };
+		665425E02CB0264F00EA4585 /* StateInfoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665425D12CB0264F00EA4585 /* StateInfoInteractor.swift */; };
+		665425E12CB0264F00EA4585 /* StateInfoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665425D32CB0264F00EA4585 /* StateInfoPresenter.swift */; };
+		665425E22CB0264F00EA4585 /* StateInfoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665425D52CB0264F00EA4585 /* StateInfoRouter.swift */; };
+		665425E32CB0264F00EA4585 /* StateInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665425D72CB0264F00EA4585 /* StateInfoViewController.swift */; };
+		665425E42CB0264F00EA4585 /* StateInfoContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665425D92CB0264F00EA4585 /* StateInfoContract.swift */; };
+		665425F12CB0278400EA4585 /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665425E72CB0278400EA4585 /* MainInteractor.swift */; };
+		665425F22CB0278400EA4585 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665425E92CB0278400EA4585 /* MainPresenter.swift */; };
+		665425F32CB0278400EA4585 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665425EB2CB0278400EA4585 /* MainRouter.swift */; };
+		665425F42CB0278400EA4585 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665425ED2CB0278400EA4585 /* MainViewController.swift */; };
+		665425F52CB0278400EA4585 /* MainContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665425EF2CB0278400EA4585 /* MainContract.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +62,21 @@
 		665425AE2CB023B100EA4585 /* USPopulationInfUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = USPopulationInfUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		665425B22CB023B100EA4585 /* USPopulationInfUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = USPopulationInfUITests.swift; sourceTree = "<group>"; };
 		665425B42CB023B100EA4585 /* USPopulationInfUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = USPopulationInfUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		665425C12CB024D100EA4585 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		665425C72CB0264F00EA4585 /* NationInfoInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NationInfoInteractor.swift; sourceTree = "<group>"; };
+		665425C92CB0264F00EA4585 /* NationInfoPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NationInfoPresenter.swift; sourceTree = "<group>"; };
+		665425CB2CB0264F00EA4585 /* NationInfoRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NationInfoRouter.swift; sourceTree = "<group>"; };
+		665425CD2CB0264F00EA4585 /* NationInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NationInfoViewController.swift; sourceTree = "<group>"; };
+		665425CF2CB0264F00EA4585 /* NationInfoContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NationInfoContract.swift; sourceTree = "<group>"; };
+		665425D12CB0264F00EA4585 /* StateInfoInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateInfoInteractor.swift; sourceTree = "<group>"; };
+		665425D32CB0264F00EA4585 /* StateInfoPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateInfoPresenter.swift; sourceTree = "<group>"; };
+		665425D52CB0264F00EA4585 /* StateInfoRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateInfoRouter.swift; sourceTree = "<group>"; };
+		665425D72CB0264F00EA4585 /* StateInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateInfoViewController.swift; sourceTree = "<group>"; };
+		665425D92CB0264F00EA4585 /* StateInfoContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateInfoContract.swift; sourceTree = "<group>"; };
+		665425E72CB0278400EA4585 /* MainInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
+		665425E92CB0278400EA4585 /* MainPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		665425EB2CB0278400EA4585 /* MainRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		665425ED2CB0278400EA4585 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		665425EF2CB0278400EA4585 /* MainContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainContract.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +127,15 @@
 		665425902CB023AF00EA4585 /* USPopulationInf */ = {
 			isa = PBXGroup;
 			children = (
+				665425F02CB0278400EA4585 /* Main */,
+				665425D02CB0264F00EA4585 /* NationInfo */,
+				665425DA2CB0264F00EA4585 /* StateInfo */,
 				665425912CB023AF00EA4585 /* AppDelegate.swift */,
 				665425932CB023AF00EA4585 /* SceneDelegate.swift */,
 				665425952CB023AF00EA4585 /* ViewController.swift */,
 				6654259A2CB023B100EA4585 /* Assets.xcassets */,
 				6654259C2CB023B100EA4585 /* LaunchScreen.storyboard */,
 				6654259F2CB023B100EA4585 /* Info.plist */,
-				665425C12CB024D100EA4585 /* MainViewController.swift */,
 			);
 			path = USPopulationInf;
 			sourceTree = "<group>";
@@ -125,6 +155,138 @@
 				665425B42CB023B100EA4585 /* USPopulationInfUITestsLaunchTests.swift */,
 			);
 			path = USPopulationInfUITests;
+			sourceTree = "<group>";
+		};
+		665425C82CB0264F00EA4585 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				665425C72CB0264F00EA4585 /* NationInfoInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		665425CA2CB0264F00EA4585 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				665425C92CB0264F00EA4585 /* NationInfoPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		665425CC2CB0264F00EA4585 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				665425CB2CB0264F00EA4585 /* NationInfoRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		665425CE2CB0264F00EA4585 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				665425CD2CB0264F00EA4585 /* NationInfoViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		665425D02CB0264F00EA4585 /* NationInfo */ = {
+			isa = PBXGroup;
+			children = (
+				665425C82CB0264F00EA4585 /* Interactor */,
+				665425CA2CB0264F00EA4585 /* Presenter */,
+				665425CC2CB0264F00EA4585 /* Router */,
+				665425CE2CB0264F00EA4585 /* View */,
+				665425CF2CB0264F00EA4585 /* NationInfoContract.swift */,
+			);
+			path = NationInfo;
+			sourceTree = "<group>";
+		};
+		665425D22CB0264F00EA4585 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				665425D12CB0264F00EA4585 /* StateInfoInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		665425D42CB0264F00EA4585 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				665425D32CB0264F00EA4585 /* StateInfoPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		665425D62CB0264F00EA4585 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				665425D52CB0264F00EA4585 /* StateInfoRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		665425D82CB0264F00EA4585 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				665425D72CB0264F00EA4585 /* StateInfoViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		665425DA2CB0264F00EA4585 /* StateInfo */ = {
+			isa = PBXGroup;
+			children = (
+				665425D22CB0264F00EA4585 /* Interactor */,
+				665425D42CB0264F00EA4585 /* Presenter */,
+				665425D62CB0264F00EA4585 /* Router */,
+				665425D82CB0264F00EA4585 /* View */,
+				665425D92CB0264F00EA4585 /* StateInfoContract.swift */,
+			);
+			path = StateInfo;
+			sourceTree = "<group>";
+		};
+		665425E82CB0278400EA4585 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				665425E72CB0278400EA4585 /* MainInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		665425EA2CB0278400EA4585 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				665425E92CB0278400EA4585 /* MainPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		665425EC2CB0278400EA4585 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				665425EB2CB0278400EA4585 /* MainRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		665425EE2CB0278400EA4585 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				665425ED2CB0278400EA4585 /* MainViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		665425F02CB0278400EA4585 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				665425E82CB0278400EA4585 /* Interactor */,
+				665425EA2CB0278400EA4585 /* Presenter */,
+				665425EC2CB0278400EA4585 /* Router */,
+				665425EE2CB0278400EA4585 /* View */,
+				665425EF2CB0278400EA4585 /* MainContract.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,10 +419,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				665425DF2CB0264F00EA4585 /* NationInfoContract.swift in Sources */,
+				665425F32CB0278400EA4585 /* MainRouter.swift in Sources */,
+				665425E32CB0264F00EA4585 /* StateInfoViewController.swift in Sources */,
 				665425962CB023AF00EA4585 /* ViewController.swift in Sources */,
+				665425E22CB0264F00EA4585 /* StateInfoRouter.swift in Sources */,
 				665425922CB023AF00EA4585 /* AppDelegate.swift in Sources */,
+				665425F12CB0278400EA4585 /* MainInteractor.swift in Sources */,
+				665425F42CB0278400EA4585 /* MainViewController.swift in Sources */,
 				665425942CB023AF00EA4585 /* SceneDelegate.swift in Sources */,
-				665425C22CB024D100EA4585 /* MainViewController.swift in Sources */,
+				665425E02CB0264F00EA4585 /* StateInfoInteractor.swift in Sources */,
+				665425F52CB0278400EA4585 /* MainContract.swift in Sources */,
+				665425DB2CB0264F00EA4585 /* NationInfoInteractor.swift in Sources */,
+				665425E42CB0264F00EA4585 /* StateInfoContract.swift in Sources */,
+				665425F22CB0278400EA4585 /* MainPresenter.swift in Sources */,
+				665425E12CB0264F00EA4585 /* StateInfoPresenter.swift in Sources */,
+				665425DE2CB0264F00EA4585 /* NationInfoViewController.swift in Sources */,
+				665425DC2CB0264F00EA4585 /* NationInfoPresenter.swift in Sources */,
+				665425DD2CB0264F00EA4585 /* NationInfoRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
