@@ -19,9 +19,10 @@ class NationInfoInteractor {
 
 extension NationInfoInteractor: NationInfoBusinessLogic {
     func loadData(request: any RequestProtocol) {
-        requestManager.loadData(request: request) { (result: Result<NationsDataModel, Error>) in
-            print("result nations", result)
+        requestManager.loadData(request: request) { [weak self] result in
+            DispatchQueue.main.async {
+                self?.output?.loadedResult(result: result)
+            }
         }
     }
-
 }

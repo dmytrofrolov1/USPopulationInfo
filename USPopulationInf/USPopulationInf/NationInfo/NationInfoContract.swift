@@ -13,11 +13,11 @@ protocol NationInfoBusinessLogic {
 }
 
 protocol NationInfoPresentationLogic {
-
+    func loadedResult(result: Result<NationsDataModel, Error>)
 }
 
-protocol NationInfoDisplayLogic: class {
-
+protocol NationInfoDisplayLogic: AnyObject {
+    func present(data:[NationInfoViewModel])
 }
 
 protocol NationInfoRouterProtocol {

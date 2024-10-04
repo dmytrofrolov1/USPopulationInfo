@@ -19,8 +19,15 @@ class NationInfoPresenter {
 // MARK: - NationInfoPresentationLogic
 
 extension NationInfoPresenter: NationInfoPresentationLogic {
-
-
-    // MARK: - Presentation logic
+    func loadedResult(result: Result<NationsDataModel, any Error>) {
+        switch result {
+        case .success(let model):
+            let viewModels = model.data.map{ NationInfoViewModel(dataItem: $0)}
+            output?.present(data: viewModels)
+            break
+        case .failure(let failure):
+            break
+        }
+    }
 
 }

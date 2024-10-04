@@ -27,3 +27,4 @@ protocol InfoPage: UIViewController {
 protocol PageFactory {
     func getPage(type: PageType) -> InfoPage
 }
+

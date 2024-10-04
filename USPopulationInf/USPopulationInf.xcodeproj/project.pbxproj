@@ -38,6 +38,10 @@
 		6654261A2CB048F500EA4585 /* StatesPageConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665426192CB048F500EA4585 /* StatesPageConfiguration.swift */; };
 		6654261C2CB06C0D00EA4585 /* NationsDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6654261B2CB06C0D00EA4585 /* NationsDataModel.swift */; };
 		6654261E2CB078AC00EA4585 /* StatesDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6654261D2CB078AC00EA4585 /* StatesDataModel.swift */; };
+		665426202CB0804300EA4585 /* NationsTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6654261F2CB0804300EA4585 /* NationsTableController.swift */; };
+		665426222CB0810900EA4585 /* NationInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665426212CB0810900EA4585 /* NationInfoViewModel.swift */; };
+		665426242CB08EF300EA4585 /* NationInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665426232CB08EF300EA4585 /* NationInfoTableViewCell.swift */; };
+		665426272CB0924F00EA4585 /* UITableViewCell+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665426262CB0924F00EA4585 /* UITableViewCell+Reusable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +97,10 @@
 		665426192CB048F500EA4585 /* StatesPageConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatesPageConfiguration.swift; sourceTree = "<group>"; };
 		6654261B2CB06C0D00EA4585 /* NationsDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NationsDataModel.swift; sourceTree = "<group>"; };
 		6654261D2CB078AC00EA4585 /* StatesDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatesDataModel.swift; sourceTree = "<group>"; };
+		6654261F2CB0804300EA4585 /* NationsTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NationsTableController.swift; sourceTree = "<group>"; };
+		665426212CB0810900EA4585 /* NationInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NationInfoViewModel.swift; sourceTree = "<group>"; };
+		665426232CB08EF300EA4585 /* NationInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NationInfoTableViewCell.swift; sourceTree = "<group>"; };
+		665426262CB0924F00EA4585 /* UITableViewCell+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Reusable.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +151,7 @@
 		665425902CB023AF00EA4585 /* USPopulationInf */ = {
 			isa = PBXGroup;
 			children = (
+				665426252CB0922D00EA4585 /* Extensions */,
 				665426112CB0466500EA4585 /* Network */,
 				665425FF2CB0435700EA4585 /* InfoPageFactory */,
 				665425F02CB0278400EA4585 /* Main */,
@@ -203,6 +212,9 @@
 			isa = PBXGroup;
 			children = (
 				665425CD2CB0264F00EA4585 /* NationInfoViewController.swift */,
+				6654261F2CB0804300EA4585 /* NationsTableController.swift */,
+				665426212CB0810900EA4585 /* NationInfoViewModel.swift */,
+				665426232CB08EF300EA4585 /* NationInfoTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -337,6 +349,14 @@
 			path = Configurations;
 			sourceTree = "<group>";
 		};
+		665426252CB0922D00EA4585 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				665426262CB0924F00EA4585 /* UITableViewCell+Reusable.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -469,6 +489,8 @@
 			files = (
 				665425DF2CB0264F00EA4585 /* NationInfoContract.swift in Sources */,
 				6654261A2CB048F500EA4585 /* StatesPageConfiguration.swift in Sources */,
+				665426242CB08EF300EA4585 /* NationInfoTableViewCell.swift in Sources */,
+				665426202CB0804300EA4585 /* NationsTableController.swift in Sources */,
 				665426182CB0489100EA4585 /* NationsPageConfiguration.swift in Sources */,
 				6654261C2CB06C0D00EA4585 /* NationsDataModel.swift in Sources */,
 				665425F32CB0278400EA4585 /* MainRouter.swift in Sources */,
@@ -479,6 +501,7 @@
 				665425E22CB0264F00EA4585 /* StateInfoRouter.swift in Sources */,
 				665425922CB023AF00EA4585 /* AppDelegate.swift in Sources */,
 				665425F12CB0278400EA4585 /* MainInteractor.swift in Sources */,
+				665426222CB0810900EA4585 /* NationInfoViewModel.swift in Sources */,
 				665426012CB0435700EA4585 /* InfoPageFactory.swift in Sources */,
 				665425F42CB0278400EA4585 /* MainViewController.swift in Sources */,
 				665425942CB023AF00EA4585 /* SceneDelegate.swift in Sources */,
@@ -490,6 +513,7 @@
 				665425E42CB0264F00EA4585 /* StateInfoContract.swift in Sources */,
 				665425F22CB0278400EA4585 /* MainPresenter.swift in Sources */,
 				665425E12CB0264F00EA4585 /* StateInfoPresenter.swift in Sources */,
+				665426272CB0924F00EA4585 /* UITableViewCell+Reusable.swift in Sources */,
 				665425DE2CB0264F00EA4585 /* NationInfoViewController.swift in Sources */,
 				665425DC2CB0264F00EA4585 /* NationInfoPresenter.swift in Sources */,
 				665425DD2CB0264F00EA4585 /* NationInfoRouter.swift in Sources */,
