@@ -25,6 +25,12 @@ class NationInfoViewController: UIViewController  {
         return controller
     }()
     
+    private lazy var refreshControl: UIRefreshControl = {
+        let control = UIRefreshControl()
+        control.addTarget(self, action: #selector(refreshData), for: .valueChanged)
+        return control
+    }()
+    
     // MARK: - Initializers
 
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -62,12 +68,19 @@ class NationInfoViewController: UIViewController  {
             tableView.bottomAnchor.constraint(equalTo: guide.bottomAnchor),
             tableView.leftAnchor.constraint(equalTo: guide.leftAnchor)
         ])
+        
+        tableView.refreshControl = refreshControl
     }
 
     // MARK: - View lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    @objc func refreshData() {
+        guard let configuration = configuration else { return }
+        interactor.loadData(request: configuration.requestType)
     }
 
 }
@@ -76,7 +89,14 @@ class NationInfoViewController: UIViewController  {
 // MARK: - NationInfoDisplayLogic
 
 extension NationInfoViewController: NationInfoDisplayLogic {
+    func presentGeneralError() {
+        showGeneralError()
+    }
+    
     func present(data: [NationInfoViewModel]) {
+        if refreshControl.isRefreshing {
+            refreshControl.endRefreshing()
+        }
         tableController.reload(data: data)
     }
 }

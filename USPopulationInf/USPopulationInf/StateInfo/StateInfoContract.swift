@@ -16,8 +16,9 @@ protocol StateInfoPresentationLogic {
     func loadedResult(result: Result<StatesDataModel, Error>)
 }
 
-protocol StateInfoDisplayLogic: class {
+protocol StateInfoDisplayLogic: AnyObject {
     func present(data:[StateInfoViewModel])
+    func presentGeneralError()
 }
 
 protocol StateInfoRouterProtocol {

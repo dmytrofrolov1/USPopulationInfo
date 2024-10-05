@@ -26,7 +26,8 @@ extension StateInfoPresenter: StateInfoPresentationLogic {
             let viewModels = model.data.map{ StateInfoViewModel(dataItem: $0)}
             output?.present(data: viewModels)
             break
-        case .failure(let failure):
+        case .failure(_):
+            output?.presentGeneralError()
             break
         }
     }

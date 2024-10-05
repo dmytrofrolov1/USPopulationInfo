@@ -27,6 +27,11 @@ class StateInfoViewController: UIViewController {
         return controller
     }()
     
+    private lazy var refreshControl: UIRefreshControl = {
+        let control = UIRefreshControl()
+        control.addTarget(self, action: #selector(refreshData), for: .valueChanged)
+        return control
+    }()
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -64,12 +69,18 @@ class StateInfoViewController: UIViewController {
             tableView.bottomAnchor.constraint(equalTo: guide.bottomAnchor),
             tableView.leftAnchor.constraint(equalTo: guide.leftAnchor)
         ])
+        tableView.refreshControl = refreshControl
     }
     // MARK: - View lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .yellow
+    }
+    
+    @objc func refreshData() {
+        guard let configuration = configuration else { return }
+        interactor.loadData(request: configuration.requestType)
     }
 
 }
@@ -78,7 +89,15 @@ class StateInfoViewController: UIViewController {
 // MARK: - StateInfoDisplayLogic
 
 extension StateInfoViewController: StateInfoDisplayLogic {
+    func presentGeneralError() {
+        showGeneralError()
+    }
+    
     func present(data: [StateInfoViewModel]) {
+        if refreshControl.isRefreshing {
+            refreshControl.endRefreshing()
+        }
+        
         tableController.reload(data: data)
     }
 }

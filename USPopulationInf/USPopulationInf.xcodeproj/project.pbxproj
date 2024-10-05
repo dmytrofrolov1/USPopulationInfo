@@ -45,6 +45,7 @@
 		665426292CB0981800EA4585 /* StatesInfoTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665426282CB0981800EA4585 /* StatesInfoTableController.swift */; };
 		6654262B2CB0986400EA4585 /* StateInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6654262A2CB0986400EA4585 /* StateInfoTableViewCell.swift */; };
 		6654262D2CB098A000EA4585 /* StateInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6654262C2CB098A000EA4585 /* StateInfoViewModel.swift */; };
+		66F14D8B2CB1AD460097F45D /* UIViewController+ErrorAlertExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F14D8A2CB1AD460097F45D /* UIViewController+ErrorAlertExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +108,7 @@
 		665426282CB0981800EA4585 /* StatesInfoTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatesInfoTableController.swift; sourceTree = "<group>"; };
 		6654262A2CB0986400EA4585 /* StateInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateInfoTableViewCell.swift; sourceTree = "<group>"; };
 		6654262C2CB098A000EA4585 /* StateInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateInfoViewModel.swift; sourceTree = "<group>"; };
+		66F14D8A2CB1AD460097F45D /* UIViewController+ErrorAlertExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ErrorAlertExtension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -362,6 +364,7 @@
 			isa = PBXGroup;
 			children = (
 				665426262CB0924F00EA4585 /* UITableViewCell+Reusable.swift */,
+				66F14D8A2CB1AD460097F45D /* UIViewController+ErrorAlertExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -526,6 +529,7 @@
 				665425E12CB0264F00EA4585 /* StateInfoPresenter.swift in Sources */,
 				665426272CB0924F00EA4585 /* UITableViewCell+Reusable.swift in Sources */,
 				665425DE2CB0264F00EA4585 /* NationInfoViewController.swift in Sources */,
+				66F14D8B2CB1AD460097F45D /* UIViewController+ErrorAlertExtension.swift in Sources */,
 				665426292CB0981800EA4585 /* StatesInfoTableController.swift in Sources */,
 				665425DC2CB0264F00EA4585 /* NationInfoPresenter.swift in Sources */,
 				665425DD2CB0264F00EA4585 /* NationInfoRouter.swift in Sources */,

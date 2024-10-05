@@ -18,6 +18,7 @@ protocol NationInfoPresentationLogic {
 
 protocol NationInfoDisplayLogic: AnyObject {
     func present(data:[NationInfoViewModel])
+    func presentGeneralError()
 }
 
 protocol NationInfoRouterProtocol {

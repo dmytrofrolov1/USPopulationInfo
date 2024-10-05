@@ -7,10 +7,6 @@
 
 import Foundation
 
-enum PopulationInfoNetworkError: Error {
-    
-}
-
 enum Request: RequestProtocol {
     case nationsInfo
     case statesInfo
