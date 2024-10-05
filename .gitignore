@@ -10,6 +10,7 @@
 *.xcuserdatad
 *.xcuserdata
 CheckMessage.xcodeproj/xcuserdata/
+*.xcuserstate
 
 ## Build generated
 build/
