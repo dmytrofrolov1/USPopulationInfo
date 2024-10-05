@@ -16,7 +16,7 @@ enum Request: RequestProtocol {
     case statesInfo
     
     var scheme: String {
-        "https://"
+        "https"
     }
     
     var host: String {
@@ -25,8 +25,18 @@ enum Request: RequestProtocol {
     
     var path: String {
         switch self {
-        case .nationsInfo: return "/api/data?drilldowns=Nation&measures=Population"
-        case .statesInfo: return "/api/data?drilldowns=State&measures=Population&year=latest"
+        case .nationsInfo: return "/api/data"
+        case .statesInfo: return "/api/data"
+        }
+    }
+    
+    var query: [[String : String]] {
+        switch self {
+        case .nationsInfo: return [["drilldowns" : "Nation"], 
+                                   ["measures" : "Population"]]
+            
+        case .statesInfo: return [["drilldowns" : "State"],
+                                  ["measures" : "Population"]]
         }
     }
     
@@ -74,8 +84,21 @@ class RequestManager: RequestManagerProtocol {
     }
     
     private func requestBuilder(request: RequestProtocol) -> URLRequest? {
-        let urlString = "\(request.scheme)\(request.host)\(request.path)"
-        guard let url = URL(string: urlString) else { return nil }
+        var components = URLComponents()
+        components.scheme = request.scheme
+        components.host = request.host
+        components.path = request.path
+        
+        let queryItems = request.query.compactMap({ dict -> URLQueryItem? in
+            guard let key = dict.keys.first, let value = dict[key] else { return nil }
+             return URLQueryItem(name: key, value:value )
+        })
+        
+        components.queryItems = queryItems
+        
+        
+        guard let url = components.url else { return nil }
+        
         return URLRequest(url: url)
     }
 }

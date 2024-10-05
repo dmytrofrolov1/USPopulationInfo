@@ -11,6 +11,7 @@ protocol RequestProtocol {
     var scheme: String { get }
     var host: String { get }
     var path: String { get }
+    var query: [[String: String]] { get }
     var method: String { get }
 
 }
